@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="KwaRhadebe's Fisheries mobile application prototype"
+    >
+
+    <title>
+        KwaRhadebe's Fisheries App
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="mobile.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="mobile-app">
+
+
+    <!-- App Header -->
+
+    <header class="app-header">
+
+        <h1>
+            KwaRhadebe's
+        </h1>
+
+        <p>
+            Fisheries
+        </p>
+
+    </header>
+
+
+    <!-- Login -->
+
+    <section
+        class="app-screen"
+        id="login"
+    >
+
+        <div class="app-logo">
+            🐟
+        </div>
+
+        <h2>
+            Welcome Back
+        </h2>
+
+        <p>
+            Login to order your favourite food.
+        </p>
+
+
+        <form
+            id="mobile-login"
+            class="mobile-form"
+        >
+
+            <label for="mobile-email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="mobile-email"
+                required
+                placeholder="Email address"
+            >
+
+
+            <label for="mobile-password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="mobile-password"
+                required
+                placeholder="Password"
+            >
+
+
+            <button
+                type="submit"
+                class="mobile-btn"
+            >
+                Login
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Menu -->
+
+    <section
+        class="app-screen"
+        id="menu"
+    >
+
+        <div class="app-title">
+
+            <h2>
+                Our Menu
+            </h2>
+
+            <p>
+                Choose your meal
+            </p>
+
+        </div>
+
+
+        <article class="food-card">
+
+            <span class="food-icon">
+                🐟
+            </span>
+
+            <div>
+
+                <h3>
+                    Fish &amp; Chips
+                </h3>
+
+                <p>
+                    R60
+                </p>
+
+            </div>
+
+            <button
+                onclick="addMobileItem('Fish & Chips', 60)"
+            >
+                +
+            </button>
+
+        </article>
+
+
+        <article class="food-card">
+
+            <span class="food-icon">
+                🥯
+            </span>
+
+            <div>
+
+                <h3>
+                    Fat Cakes
+                </h3>
+
+                <p>
+                    R10
+                </p>
+
+            </div>
+
+            <button
+                onclick="addMobileItem('Fat Cakes', 10)"
+            >
+                +
+            </button>
+
+        </article>
+
+
+        <article class="food-card">
+
+            <span class="food-icon">
+                🥤
+            </span>
+
+            <div>
+
+                <h3>
+                    Cold Drink
+                </h3>
+
+                <p>
+                    R15
+                </p>
+
+            </div>
+
+            <button
+                onclick="addMobileItem('Cold Drink', 15)"
+            >
+                +
+            </button>
+
+        </article>
+
+
+        <button
+            class="mobile-btn"
+            onclick="showScreen('checkout')"
+        >
+            View Cart
+        </button>
+
+    </section>
+
+
+    <!-- Checkout -->
+
+    <section
+        class="app-screen"
+        id="checkout"
+    >
+
+        <div class="app-title">
+
+            <h2>
+                Checkout
+            </h2>
+
+            <p>
+                Confirm your order.
+            </p>
+
+        </div>
+
+
+        <div
+            id="mobile-cart"
+            class="mobile-cart"
+        >
+            Your cart is empty.
+        </div>
+
+
+        <form
+            id="mobile-checkout"
+            class="mobile-form"
+        >
+
+            <label for="mobile-address">
+                Delivery Address
+            </label>
+
+            <textarea
+                id="mobile-address"
+                required
+                placeholder="Delivery address"
+            ></textarea>
+
+
+            <label for="mobile-payment">
+                Payment
+            </label>
+
+            <select
+                id="mobile-payment"
+                required
+            >
+
+                <option value="">
+                    Select payment method
+                </option>
+
+                <option>
+                    Card
+                </option>
+
+                <option>
+                    Online Payment
+                </option>
+
+                <option>
+                    Cash on Delivery
+                </option>
+
+            </select>
+
+
+            <button
+                type="submit"
+                class="mobile-btn"
+            >
+                Place Order
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Tracking -->
+
+    <section
+        class="app-screen"
+        id="tracking"
+    >
+
+        <div class="app-title">
+
+            <h2>
+                Track Delivery
+            </h2>
+
+            <p>
+                Order #5002
+            </p>
+
+        </div>
+
+
+        <div class="tracking-card">
+
+            <div class="tracking-step active">
+                ✓
+                <span>
+                    Order Received
+                </span>
+            </div>
+
+
+            <div class="tracking-step active">
+                ✓
+                <span>
+                    Preparing
+                </span>
+            </div>
+
+
+            <div class="tracking-step active">
+                🚚
+                <span>
+                    Out for Delivery
+                </span>
+            </div>
+
+
+            <div class="tracking-step">
+                ○
+                <span>
+                    Delivered
+                </span>
+            </div>
+
+        </div>
+
+
+        <button
+            class="mobile-btn"
+            onclick="showScreen('history')"
+        >
+            View Order History
+        </button>
+
+    </section>
+
+
+    <!-- Order History -->
+
+    <section
+        class="app-screen"
+        id="history"
+    >
+
+        <div class="app-title">
+
+            <h2>
+                Order History
+            </h2>
+
+            <p>
+                Your previous orders.
+            </p>
+
+        </div>
+
+
+        <article class="history-card">
+
+            <div>
+
+                <h3>
+                    Order #5001
+                </h3>
+
+                <p>
+                    Fish &amp; Chips
+                </p>
+
+            </div>
+
+            <strong>
+                R120
+            </strong>
+
+        </article>
+
+
+        <article class="history-card">
+
+            <div>
+
+                <h3>
+                    Order #5002
+                </h3>
+
+                <p>
+                    Fish &amp; Chips + Drink
+                </p>
+
+            </div>
+
+            <strong>
+                R75
+            </strong>
+
+        </article>
+
+
+        <article class="history-card">
+
+            <div>
+
+                <h3>
+                    Order #5003
+                </h3>
+
+                <p>
+                    Fat Cakes
+                </p>
+
+            </div>
+
+            <strong>
+                R40
+            </strong>
+
+        </article>
+
+
+        <button
+            class="mobile-btn"
+            onclick="showScreen('menu')"
+        >
+            Order Again
+        </button>
+
+    </section>
+
+
+    <!-- Mobile Navigation -->
+
+    <nav class="bottom-nav">
+
+        <button
+            onclick="showScreen('menu')"
+        >
+            🏠
+            <span>
+                Menu
+            </span>
+        </button>
+
+
+        <button
+            onclick="showScreen('checkout')"
+        >
+            🛒
+            <span>
+                Cart
+            </span>
+        </button>
+
+
+        <button
+            onclick="showScreen('tracking')"
+        >
+            🚚
+            <span>
+                Track
+            </span>
+        </button>
+
+
+        <button
+            onclick="showScreen('history')"
+        >
+            📋
+            <span>
+                Orders
+            </span>
+        </button>
+
+    </nav>
+
+
+</div>
+
+
+<script>
+
+let mobileCart = [];
+
+
+/*
+    Show mobile screen
+*/
+
+function showScreen(screenId) {
+
+    const screens =
+        document.querySelectorAll(
+            ".app-screen"
+        );
+
+
+    screens.forEach(
+        function (screen) {
+
+            screen.style.display =
+                "none";
+
+        }
+    );
+
+
+    const selectedScreen =
+        document.getElementById(
+            screenId
+        );
+
+
+    if (selectedScreen) {
+
+        selectedScreen.style.display =
+            "block";
+
+    }
+
+
+    updateMobileCart();
+
+}
+
+
+/*
+    Add item
+*/
+
+function addMobileItem(
+    name,
+    price
+) {
+
+    mobileCart.push({
+        name: name,
+        price: price
+    });
+
+
+    alert(
+        name +
+        " added to cart."
+    );
+
+
+    updateMobileCart();
+
+}
+
+
+/*
+    Update cart
+*/
+
+function updateMobileCart() {
+
+    const cart =
+        document.getElementById(
+            "mobile-cart"
+        );
+
+
+    if (!cart) {
+
+        return;
+
+    }
+
+
+    if (mobileCart.length === 0) {
+
+        cart.textContent =
+            "Your cart is empty.";
+
+        return;
+
+    }
+
+
+    let total = 0;
+
+    let html = "<h3>Your Order</h3>";
+
+
+    mobileCart.forEach(
+        function (item) {
+
+            total += item.price;
+
+            html += `
+                <p>
+                    ${item.name}
+                    -
+                    R${item.price}
+                </p>
+            `;
+
+        }
+    );
+
+
+    html += `
+        <hr>
+        <strong>
+            Total: R${total}
+        </strong>
+    `;
+
+
+    cart.innerHTML = html;
+
+}
+
+
+/*
+    Mobile login
+*/
+
+document
+    .getElementById("mobile-login")
+    .addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            showScreen("menu");
+
+        }
+    );
+
+
+/*
+    Mobile checkout
+*/
+
+document
+    .getElementById("mobile-checkout")
+    .addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            alert(
+                "Order successfully placed. " +
+                "Your order number is #5002."
+            );
+
+            mobileCart = [];
+
+            showScreen("tracking");
+
+        }
+    );
+
+
+/*
+    Start application
+*/
+
+showScreen("login");
+
+</script>
+
+
+</body>
+
+</html>

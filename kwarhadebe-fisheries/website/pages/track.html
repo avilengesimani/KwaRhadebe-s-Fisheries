@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Track Order | KwaRhadebe's Fisheries
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+                KwaRhadebe's Fisheries
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="menu.html">
+                        Menu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="track.html">
+                        Track Order
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="container">
+
+    <div class="page-heading">
+
+        <p class="eyebrow">
+            Delivery
+        </p>
+
+        <h1>
+            Track Your Order
+        </h1>
+
+        <p>
+            Enter your order number to view
+            the latest delivery status.
+        </p>
+
+    </div>
+
+
+    <form
+        class="card form-card"
+        id="tracking-form"
+    >
+
+        <label for="order-id">
+            Order Number
+        </label>
+
+        <input
+            type="text"
+            id="order-id"
+            name="order-id"
+            placeholder="Example: 5002"
+            required
+        >
+
+
+        <button
+            type="submit"
+            class="btn"
+        >
+            Track Order
+        </button>
+
+    </form>
+
+
+    <section
+        class="card"
+        id="tracking-result"
+        hidden
+    >
+
+        <h2>
+            Order #5002
+        </h2>
+
+        <p>
+            Your order is currently:
+        </p>
+
+        <p>
+            <strong>
+                Out for Delivery
+            </strong>
+        </p>
+
+
+        <div class="status-container">
+
+            <div class="status active">
+                <h3>
+                    1
+                </h3>
+
+                <p>
+                    Order Received
+                </p>
+            </div>
+
+
+            <div class="status active">
+                <h3>
+                    2
+                </h3>
+
+                <p>
+                    Preparing
+                </p>
+            </div>
+
+
+            <div class="status active">
+                <h3>
+                    3
+                </h3>
+
+                <p>
+                    Out for Delivery
+                </p>
+            </div>
+
+
+            <div class="status">
+                <h3>
+                    4
+                </h3>
+
+                <p>
+                    Delivered
+                </p>
+            </div>
+
+        </div>
+
+
+        <p>
+            Your driver has been assigned
+            and is currently on the way.
+        </p>
+
+    </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 KwaRhadebe's Fisheries
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/app.js"></script>
+
+</body>
+
+</html>

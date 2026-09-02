@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Driver Dashboard | KwaRhadebe's Fisheries
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+                KwaRhadebe's Fisheries
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="driver.html">
+                        My Deliveries
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="container">
+
+    <div class="page-heading">
+
+        <p class="eyebrow">
+            Driver Portal
+        </p>
+
+        <h1>
+            My Deliveries
+        </h1>
+
+        <p>
+            View assigned deliveries and
+            update delivery statuses.
+        </p>
+
+    </div>
+
+
+    <section class="card">
+
+        <h2>
+            Assigned Deliveries
+        </h2>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Order
+                        </th>
+
+                        <th>
+                            Customer
+                        </th>
+
+                        <th>
+                            Address
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            #5001
+                        </td>
+
+                        <td>
+                            Customer 001
+                        </td>
+
+                        <td>
+                            Khayelitsha
+                        </td>
+
+                        <td>
+                            Assigned
+                        </td>
+
+                        <td>
+                            <button
+                                class="btn"
+                                type="button"
+                                onclick="updateStatus('5001')"
+                            >
+                                Accept
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            #5002
+                        </td>
+
+                        <td>
+                            Customer 002
+                        </td>
+
+                        <td>
+                            Ilitha Park
+                        </td>
+
+                        <td>
+                            Out for Delivery
+                        </td>
+
+                        <td>
+                            <button
+                                class="btn"
+                                type="button"
+                                onclick="updateStatus('5002')"
+                            >
+                                Update
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            #5003
+                        </td>
+
+                        <td>
+                            Customer 003
+                        </td>
+
+                        <td>
+                            Khayelitsha
+                        </td>
+
+                        <td>
+                            Completed
+                        </td>
+
+                        <td>
+                            Completed
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 KwaRhadebe's Fisheries
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function updateStatus(orderNumber) {
+
+    alert(
+        "Delivery status for Order #" +
+        orderNumber +
+        " has been updated."
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

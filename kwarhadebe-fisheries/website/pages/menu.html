@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="KwaRhadebe's Fisheries food menu"
+    >
+
+    <title>
+        Menu | KwaRhadebe's Fisheries
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="site-header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+                <a
+                    href="../index.html"
+                    class="logo"
+                >
+                    KwaRhadebe's Fisheries
+                </a>
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="menu.html">
+                            Menu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="track.html">
+                            Track Order
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="login.html">
+                            Login
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="container">
+
+            <div class="page-heading">
+
+                <p class="eyebrow">
+                    Our Food
+                </p>
+
+                <h1>
+                    Menu
+                </h1>
+
+                <p>
+                    Choose your favourite meal
+                    and add it to your cart.
+                </p>
+
+            </div>
+
+
+            <div class="grid-3">
+
+
+                <!-- Fish and Chips -->
+
+                <article class="card menu-card">
+
+                    <div class="card-icon">
+                        🐟
+                    </div>
+
+                    <h2>
+                        Fish &amp; Chips
+                    </h2>
+
+                    <p>
+                        Freshly prepared fish served
+                        with hot crispy chips.
+                    </p>
+
+                    <p class="menu-price">
+                        R60.00
+                    </p>
+
+                    <button
+                        class="btn add-to-cart"
+                        data-item="Fish & Chips"
+                        data-price="60"
+                    >
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+                <!-- Fat Cakes -->
+
+                <article class="card menu-card">
+
+                    <div class="card-icon">
+                        🥯
+                    </div>
+
+                    <h2>
+                        Fat Cakes
+                    </h2>
+
+                    <p>
+                        Freshly prepared fat cakes
+                        suitable as a quick snack.
+                    </p>
+
+                    <p class="menu-price">
+                        R10.00
+                    </p>
+
+                    <button
+                        class="btn add-to-cart"
+                        data-item="Fat Cakes"
+                        data-price="10"
+                    >
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+                <!-- Cold Drink -->
+
+                <article class="card menu-card">
+
+                    <div class="card-icon">
+                        🥤
+                    </div>
+
+                    <h2>
+                        Cold Drink
+                    </h2>
+
+                    <p>
+                        Add a refreshing cold drink
+                        to your meal.
+                    </p>
+
+                    <p class="menu-price">
+                        R15.00
+                    </p>
+
+                    <button
+                        class="btn add-to-cart"
+                        data-item="Cold Drink"
+                        data-price="15"
+                    >
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- Shopping Cart -->
+
+            <section
+                class="card cart"
+                aria-live="polite"
+            >
+
+                <h2>
+                    Your Cart
+                </h2>
+
+                <ul id="cart-list">
+
+                    <li>
+                        Your cart is empty.
+                    </li>
+
+                </ul>
+
+
+                <p>
+                    <strong>
+                        Total: R
+                        <span id="cart-total">
+                            0.00
+                        </span>
+                    </strong>
+                </p>
+
+
+                <a
+                    href="checkout.html"
+                    class="btn"
+                >
+                    Proceed to Checkout
+                </a>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 KwaRhadebe's Fisheries
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/app.js"></script>
+
+</body>
+
+</html>

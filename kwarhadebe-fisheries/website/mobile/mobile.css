@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #dfe6eb;
+
+    color: #24313d;
+}
+
+
+.mobile-app {
+    width: 100%;
+    max-width: 430px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    background-color: #f6f8fa;
+
+    position: relative;
+
+    padding-bottom: 75px;
+}
+
+
+/* ================================
+   APP HEADER
+================================ */
+
+.app-header {
+    background-color: #173b57;
+
+    color: white;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.app-header h1 {
+    font-size: 1.4rem;
+}
+
+.app-header p {
+    font-size: 0.9rem;
+}
+
+
+/* ================================
+   SCREENS
+================================ */
+
+.app-screen {
+    padding: 25px 20px;
+
+    min-height: 600px;
+}
+
+.app-title {
+    margin-bottom: 25px;
+}
+
+.app-title h2 {
+    font-size: 1.8rem;
+}
+
+.app-title p {
+    color: #68737c;
+}
+
+
+/* ================================
+   LOGIN
+================================ */
+
+.app-logo {
+    font-size: 4rem;
+
+    text-align: center;
+
+    margin: 40px 0 20px;
+}
+
+#login {
+    text-align: center;
+}
+
+#login h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   FORMS
+================================ */
+
+.mobile-form {
+    text-align: left;
+
+    margin-top: 25px;
+}
+
+.mobile-form label {
+    display: block;
+
+    font-weight: bold;
+
+    margin: 15px 0 7px;
+}
+
+.mobile-form input,
+.mobile-form textarea,
+.mobile-form select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #c0c9d0;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+}
+
+.mobile-form textarea {
+    min-height: 100px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.mobile-btn {
+    width: 100%;
+
+    background-color: #173b57;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 14px;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.mobile-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* ================================
+   FOOD CARDS
+================================ */
+
+.food-card {
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d7dee4;
+}
+
+.food-icon {
+    font-size: 2.3rem;
+}
+
+.food-card div {
+    flex: 1;
+}
+
+.food-card h3 {
+    font-size: 1rem;
+}
+
+.food-card p {
+    color: #173b57;
+
+    font-weight: bold;
+}
+
+.food-card button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #173b57;
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   CART
+================================ */
+
+.mobile-cart {
+    background-color: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    border: 1px solid #d7dee4;
+
+    margin-bottom: 20px;
+}
+
+.mobile-cart p {
+    padding: 7px 0;
+}
+
+
+/* ================================
+   TRACKING
+================================ */
+
+.tracking-card {
+    background-color: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+}
+
+.tracking-step {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 17px 5px;
+
+    border-bottom: 1px solid #ddd;
+
+    color: #89939c;
+}
+
+.tracking-step:last-child {
+    border-bottom: none;
+}
+
+.tracking-step.active {
+    color: #173b57;
+
+    font-weight: bold;
+}
+
+
+/* ================================
+   HISTORY
+================================ */
+
+.history-card {
+    background-color: white;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border: 1px solid #d7dee4;
+}
+
+.history-card h3 {
+    font-size: 1rem;
+}
+
+.history-card p {
+    color: #68737c;
+
+    font-size: 0.9rem;
+
+    margin-top: 4px;
+}
+
+
+/* ================================
+   BOTTOM NAVIGATION
+================================ */
+
+.bottom-nav {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    max-width: 430px;
+
+    height: 70px;
+
+    background-color: white;
+
+    border-top: 1px solid #d7dee4;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    z-index: 100;
+}
+
+.bottom-nav button {
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    color: #53616d;
+
+    font-size: 1.2rem;
+}
+
+.bottom-nav span {
+    display: block;
+
+    font-size: 0.7rem;
+
+    margin-top: 3px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (min-width: 600px) {
+
+    .mobile-app {
+        margin-top: 30px;
+
+        margin-bottom: 30px;
+
+        border-radius: 25px;
+
+        overflow: hidden;
+
+        box-shadow:
+            0 10px 30px rgba(0,0,0,0.15);
+    }
+
+}
